@@ -1,13 +1,13 @@
 <template>
   <v-footer
- 
+  
     dark
     padless
     height="200"
   >
     <v-card
    
-      app
+     app
       flat
       tile
       class="black lighten-1 white--text    text-center"

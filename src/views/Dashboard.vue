@@ -1,5 +1,13 @@
 <template>
-  <v-card
+<v-container>
+  <v-row no-gutters  v-for="n in 13"
+        :key="n"
+        cols="12"
+        sm="4">
+    <v-col
+       
+      >
+  <v-card 
   
   
     class="mx-auto mt-7"
@@ -7,6 +15,8 @@
     ripple
     outlined
     shaped
+    hover
+    
     
     
   >
@@ -18,7 +28,7 @@
       </v-list-item-content>
  <v-avatar>
       <img
-        src="https://cdn.vuetifyjs.com/images/john.jpg"
+        src="https://randomuser.me/api/portraits/men/78.jpg"
         alt="John"
       >
     </v-avatar>
@@ -38,6 +48,18 @@
               </v-btn>
     </v-card-actions>
   </v-card>
+    </v-col>
+  </v-row>
+
+    <div class="text-center mt-10">
+    <v-pagination
+      v-model="page"
+      :length="6"
+      
+    ></v-pagination>
+  </div>
+
+  </v-container>
   
 </template>
 <script>
@@ -53,6 +75,7 @@ export default {
           { title: 'Find Job', icon: 'mdi-account' },
       ],
        right: null,
+        page: 1
         }
     }
     
